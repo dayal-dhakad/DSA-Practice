@@ -57,7 +57,9 @@ int findLargestMinDistance(vector<int> &boards, int k)
  
 int main(){
  
-  
+  vector<int> v = {5, 5, 5, 5};
+ int answer =  findLargestMinDistance(v, 2);
+  cout<<answer;
   
 return 0;
 }
