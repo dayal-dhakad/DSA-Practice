@@ -1,7 +1,9 @@
 #include<iostream>
-using namespace std;
- 
+#include<vector>
 #include <bits/stdc++.h> 
+
+using namespace std;
+
 bool isPossible(vector<int> arr, int n, int m, int mid)
 {
     int studentCount = 1;
@@ -53,7 +55,15 @@ return ans;
  
 int main(){
  
+  vector<int> v = { 10, 20, 10, 10, 20, 10};
+  /* v.push_back(10);  // 10, 190 = 190
+  v.push_back(60);  // 70, 130 = 130
+  v.push_back(40);  // 110, 90 = 110
+  v.push_back(60);  // 170, 30 = 170
+  v.push_back(30);  
+
+ */
+ cout<<allocateBooks(v, v.size(), 2);
   
-  
-return 0;
+
 }
