@@ -46,7 +46,7 @@ void print(int ans[], int k)
  
 int main(){
  
-  int arr1[5]= {1, 3, 4, 7, 8};
+  int arr1[5]= {1, 3, 4, 6, 8};
  int  arr2[3] = {2, 5, 6};
   int arr3[8] = {0};
 
