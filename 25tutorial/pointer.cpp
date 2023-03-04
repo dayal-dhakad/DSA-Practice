@@ -9,7 +9,9 @@ int main(){
  cout<<"address of num is "<<&num<<endl;
  int *ptr = &num;
 
- cout<<"value is : "<<*ptr<<endl;
+ cout<<"value is : "<<*ptr<<endl; 
+  cout<<"value is : "<<ptr<<endl; 
+
   
   
 return 0;
