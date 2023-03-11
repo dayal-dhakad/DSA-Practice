@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
- 
+ //Compile time polymorphism
  // Function overloading
 class A{
     public:

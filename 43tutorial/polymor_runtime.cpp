@@ -1,7 +1,8 @@
 #include<iostream>
 using namespace std;
  
- // Operator overloading
+ // Runtime polymorphism
+ 
 class B{
     public:
     int a;
@@ -26,10 +27,33 @@ class B{
         cout<<"I am a bracket "<<this->a<<endl;
     }
 };
-    
+
+
+//Method overriding
+
+class Animal{
+  public:
+
+  void speak(){
+    cout<<"Speaking"<<endl;
+  }
+};
+
+class Dog : public Animal{
+   public:
+
+   void speak(){
+    cout<<"Barking"<<endl;
+   }
+};
  
 int main(){
- B obj1, obj2;
+ Dog obj;
+ obj.speak(); 
+
+
+
+/* B obj1, obj2;
 
  obj1.a = 4;
  obj2.a = 7;
@@ -37,6 +61,6 @@ int main(){
  obj1 + obj2;
 
  obj1();
-  
+*/
 return 0;
 }
