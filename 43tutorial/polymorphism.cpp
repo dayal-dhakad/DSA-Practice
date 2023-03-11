@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
  
+ // Function overloading
 class A{
     public:
     void sayHello(){
@@ -17,7 +18,7 @@ int main(){
   A obj;
   obj.sayHello();
 
- // string name = 
+  
   obj.sayHello("Dhakad");
   
 return 0;
