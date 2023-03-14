@@ -24,7 +24,7 @@ public:
     }
 };
 
-void insertAtTail(Node *&tail, int element, int d) //element is the already data present in the list
+void insertAtTail(Node *&tail, int element, int d) // element is the already data present in the list
 {
     // assuming that the element is present in the list
 
@@ -53,24 +53,56 @@ void insertAtTail(Node *&tail, int element, int d) //element is the already data
     }
 }
 
-void print(Node* tail){
-  Node*temp = tail;
-  do{
-     cout<<tail->data<<" ";
-    tail = tail->next;
+void print(Node *tail)
+{
+    Node *temp = tail;
+    do
+    {
+        cout << tail->data << " ";
+        tail = tail->next;
 
-  }while(tail != temp);
-  cout<<endl;
-
-  
+    } while (tail != temp);
+    cout << endl;
 }
 
+void deleteNode(Node*&tail, int value){
+    //empty list
+    if(tail==NULL){
+        cout<<"List is empty "<<endl;
+        return;
+    }
+    else{
+        //list is non-empty
+        Node*prev = tail;
+        Node*curr = prev->next;
+        while(curr->data != value){
+            prev= curr;
+            curr = curr->next;
+
+        }
+        prev->next = curr -> next;
+        if(tail == curr){
+            tail = prev;
+        }
+        curr->next = NULL;
+        delete curr;
+    }
+}
 int main()
 {
-Node*tail = NULL;
-insertAtTail(tail, 5, 3);
-print(tail);
-insertAtTail(tail, 3, 5);
-print(tail);
+    Node *tail = NULL;
+    insertAtTail(tail, 5, 3);
+    print(tail);
+    insertAtTail(tail, 3, 5);
+    print(tail);
+    insertAtTail(tail, 5, 7);
+    print(tail);
+    insertAtTail(tail, 7, 9);
+    print(tail);
+    insertAtTail(tail, 9, 10);
+    print(tail);
+
+    deleteNode(tail, 10);
+    print(tail);
     return 0;
 }
