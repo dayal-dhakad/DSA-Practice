@@ -56,6 +56,11 @@ void insertAtTail(Node *&tail, int element, int d) // element is the already dat
 void print(Node *tail)
 {
     Node *temp = tail;
+
+    if(tail ==NULL){
+        cout<<"List is empty"<<endl;
+    }
+
     do
     {
         cout << tail->data << " ";
@@ -81,7 +86,12 @@ void deleteNode(Node*&tail, int value){
 
         }
         prev->next = curr -> next;
-        if(tail == curr){
+        //1 Node linked list
+        if(curr==prev){
+            tail = NULL;
+        }
+        //2 node linked list
+       else if(tail == curr){
             tail = prev;
         }
         curr->next = NULL;
@@ -93,16 +103,16 @@ int main()
     Node *tail = NULL;
     insertAtTail(tail, 5, 3);
     print(tail);
-    insertAtTail(tail, 3, 5);
-    print(tail);
-    insertAtTail(tail, 5, 7);
-    print(tail);
-    insertAtTail(tail, 7, 9);
-    print(tail);
-    insertAtTail(tail, 9, 10);
-    print(tail);
+    // insertAtTail(tail, 3, 5);
+    // print(tail);
+    // insertAtTail(tail, 5, 7);
+    // print(tail);
+    // insertAtTail(tail, 7, 9);
+    // print(tail);
+    // insertAtTail(tail, 9, 10);
+    // print(tail);
 
-    deleteNode(tail, 10);
+    deleteNode(tail, 3);
     print(tail);
     return 0;
 }
