@@ -37,7 +37,7 @@ void print(Node *&head)
 int main()
 {
 
-    Node *node1 = new Node(10);
+    Node *node1 = new Node(10); //while we create an object constructor is called
     //  cout<< node1->data<<endl;
     //  cout<< node1->next<<endl;
 
