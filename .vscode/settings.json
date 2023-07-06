@@ -6,7 +6,8 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "utility": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "unordered_map": "cpp"
     },
     "github-enterprise.uri": "https://dsa practic"
 }
