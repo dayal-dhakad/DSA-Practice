@@ -12,17 +12,15 @@ using namespace std;
         return true;
     }
     else{
-        linearSearch(arr+1, size-1, key);
+       bool remainingPart =  linearSearch(arr+1, size-1, key);
+        return remainingPart;
     }
-     
-    
-
 
  }
  
 int main(){
   int arr[5] = {2, 4, 6, 7, 9};
-    int key = 9;
+    int key = 94;
     int size = sizeof(arr)/sizeof(arr[0]);
   bool ans = linearSearch(arr, size, key);
   if(ans){
