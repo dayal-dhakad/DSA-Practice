@@ -3,20 +3,20 @@
 
 using namespace std;
  
- bool isPalindrome(string str, int i, int j){
+ bool isPalindrome(string str, int i, int n){
     
-    if (i>j){
+    if (i>n-i){   //n-i in place of j
         return true;
     }
     
-    if(str[i]!=str[j]){
+    if(str[i]!=str[n-i]){  //n-i in place of j
         return false;
     }
 
     else{
-        i++;
-        j--;
-        bool answer = isPalindrome(str, i, j);
+        i++;   
+        
+        bool answer = isPalindrome(str, i, n);
         return answer;
     }
     
@@ -24,7 +24,7 @@ using namespace std;
  
 int main(){
  
-  string str = "aabbccbbaa";
+  string str = "aabaa";
   int size = str.size();
   int len = size-1;
   bool ans = isPalindrome(str, 0, len);
