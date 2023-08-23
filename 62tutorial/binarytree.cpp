@@ -6,8 +6,8 @@ class node
 {
 public:
     int data;
-    node *left;
-    node *right;
+    node* left;
+    node* right;
 
     node(int d)
     {
@@ -17,7 +17,7 @@ public:
     }
 };
 
-node *buildTree(node *root)
+node* buildTree(node* root)
 {
     cout << "Enter the data " << endl;
     int data;
