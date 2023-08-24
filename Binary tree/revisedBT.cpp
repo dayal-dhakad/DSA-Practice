@@ -57,9 +57,7 @@ class Node{
             }
         }
         else{
-
             cout<<temp->data<<" ";
-            
             if(temp->left){
             q.push(temp->left);
              }
@@ -68,15 +66,12 @@ class Node{
         }
 
         }
-
-        
     }
 
  }
  
 int main(){
  Node* root = NULL;
-
 
 // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1 
 
